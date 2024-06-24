@@ -5,8 +5,7 @@ description: |
 version: test
 base: core22
 architectures:
-  - build-on: [amd64]
-  - build-on: [arm64]
+  - build-on: [arm64, armhf, amd64]
 confinement: strict
 grade: stable
 type: app
@@ -25,6 +24,5 @@ apps:
 parts:
   go-webserver:
     plugin: go
-    build-snaps: [go/latest/stable]
-    source: https://github.com/jgrantmoore/go-webserver
     source-type: git
+    source: https://github.com/jgrantmoore/go-webserver
