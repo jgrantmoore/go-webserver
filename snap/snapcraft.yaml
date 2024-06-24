@@ -25,5 +25,3 @@ parts:
     build-snaps: [go/latest/stable]
     source: https://github.com/jgrantmoore/go-webserver
     source-type: git
-    override-build:
-      go build main.go
