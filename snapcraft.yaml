@@ -2,7 +2,7 @@ name: go-webserver
 summary: Lightweight webserver to display a basic html file
 description: |
       Created to display a basic loading html file until the PLC has started.
-adopt-info: go-webserver
+version: test
 base: core22
 confinement: strict
 type: app
