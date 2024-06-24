@@ -5,6 +5,7 @@ description: |
 version: test
 base: core22
 confinement: strict
+grade: stable
 type: app
 
 apps:
@@ -14,17 +15,13 @@ apps:
       - home
       - browser-support
       - network
-      - network-status
       - network-bind
-      - network-observe
-      - network-control
     daemon: simple
     restart-condition: always
+
 parts:
   go-webserver:
     plugin: go
     build-snaps: [go/latest/stable]
     source: https://github.com/jgrantmoore/go-webserver
     source-type: git
-    override-build: |
-      go build -o ./bin/ main.go
