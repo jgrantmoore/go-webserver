@@ -4,15 +4,13 @@ description: |
       Created to display a basic loading html file until the PLC has started.
 version: test
 base: core22
-architectures:
-  - build-on: [arm64, armhf, amd64]
 confinement: strict
 grade: stable
 type: app
 
 apps:
   go-webserver:
-    command: bin/main
+    command: /main
     plugs:
       - home
       - browser-support
@@ -24,5 +22,8 @@ apps:
 parts:
   go-webserver:
     plugin: go
-    source-type: git
+    build-snaps: [go/latest/stable]
     source: https://github.com/jgrantmoore/go-webserver
+    source-type: git
+    override-build:
+      go build main.go
