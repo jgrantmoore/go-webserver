@@ -5,8 +5,8 @@ description: |
 version: test
 base: core22
 architectures:
-  - build-on: amd64
-  - run-on: all
+  - build-on: [amd64]
+  - build-on: [arm64]
 confinement: strict
 grade: stable
 type: app
