@@ -13,7 +13,7 @@ type: app
 
 apps:
   go-webserver:
-    command: bin/main.exe
+    command: bin/main
     plugs:
       - home
       - browser-support
@@ -26,7 +26,6 @@ parts:
   go-webserver:
     plugin: go
     build-snaps: [go/latest/stable]
-    source: https://github.com/jgrantmoore/go-webserver
-    source-type: git
+    source: ./main.go
     override-build: |
       env GOOS=linux GOARCH=arm go build -o ./bin/ main.go
