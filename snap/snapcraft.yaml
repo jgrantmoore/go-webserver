@@ -26,4 +26,5 @@ parts:
   go-webserver:
     plugin: go
     build-snaps: [go/latest/stable]
-    source: ./main.go
+    source: https://github.com/jgrantmoore/go-webserver
+    source-type: git
