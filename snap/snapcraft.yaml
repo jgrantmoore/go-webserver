@@ -4,6 +4,9 @@ description: |
       Created to display a basic loading html file until the PLC has started.
 version: test
 base: core22
+architectures:
+  - build-on: amd64
+  - run-on: all
 confinement: strict
 grade: stable
 type: app
