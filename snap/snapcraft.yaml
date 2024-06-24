@@ -27,5 +27,3 @@ parts:
     plugin: go
     build-snaps: [go/latest/stable]
     source: ./main.go
-    override-build: |
-      env GOOS=linux GOARCH=arm go build -o ./bin/ main.go
