@@ -10,7 +10,7 @@ type: app
 
 apps:
   go-webserver:
-    command: /main
+    command: /go-webserver
     plugs:
       - home
       - browser-support
