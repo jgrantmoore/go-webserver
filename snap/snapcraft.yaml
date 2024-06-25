@@ -23,7 +23,7 @@ parts:
   go-webserver:
     plugin: go
     build-snaps: [go/latest/stable]
-    source: ./build
+    source: .
     override-build:
       pwd
       chmod 777 build.sh
