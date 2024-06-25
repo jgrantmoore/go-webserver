@@ -25,5 +25,5 @@ parts:
     build-snaps: [go/latest/stable]
     source: ./build
     override-build:
-      sudo chmod 777 build.sh
+      chmod 777 build.sh
       ./build.sh
