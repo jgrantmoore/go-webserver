@@ -23,7 +23,8 @@ parts:
   go-webserver:
     plugin: go
     build-snaps: [go/latest/stable]
-    source: .
+    source: https://github.com/jgrantmoore/go-webserver
+    source-type: git
     override-build:
       pwd
       chmod 777 build.sh
