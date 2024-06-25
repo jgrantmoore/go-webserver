@@ -10,7 +10,7 @@ type: app
 
 apps:
   go-webserver:
-    command: /go-webserver
+    command: /main
     plugs:
       - home
       - browser-support
@@ -23,6 +23,5 @@ parts:
   go-webserver:
     plugin: go
     build-snaps: [go/latest/stable]
-    source: https://github.com/jgrantmoore/go-webserver
-    source-type: git
+    source: ./build
     
